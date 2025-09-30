@@ -10,7 +10,7 @@
 </p>
 
 <p align="justify">
-1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete Reticulate y se generaron funciones para pre-procesar la base de datos de CAMELS-CL como una base de datos generica y con ello evitar errores del paquete. Se generó un entrenamiento para las cuencas de la Región del Biobío para un modelo EA-LSTM y los siguientes atributos dinámicos y estáticos:
+1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete Reticulate y se generaron funciones para pre-procesar la base de datos de CAMELS-CL como una base de datos generica y con ello evitar errores de incompatibilidad entre el formato de la base de datos y algunas funciones del paquete. Se generó un entrenamiento para las cuencas de la Región del Biobío para un modelo EA-LSTM y los siguientes atributos dinámicos y estáticos:
 
 
 **Dinámicos:**
