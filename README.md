@@ -36,7 +36,6 @@ Los hiperparámetros se pueden ver en el archivo YAML, además de todas las espe
 
 
 <p align="justify">
-
 2. En la <strong>Figura 2</strong> se puede ver la predicción para una cuenca en periodo de testeo. Mientras que en la <strong>Figura 3</strong> se graficaron todas las cuencas para el periodo de testeo.
 
 <div align="center">
