@@ -30,7 +30,7 @@
 Los hiperparámetros se pueden ver en el archivo YAML, además de todas las especificaciones del modelo implementado. En la <strong>Figura 1</strong> se muestra la pérdida total promedio para la métrica MSE.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/main/perdida.png" alt="Figura 1 - fig1">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/main/perdidas.png" alt="Figura 1 - fig1">
 </div>
 <p><strong>Figura 1</strong>: Pérdida para la métrica MSE para las primeras 10 épocas de entrenamiento. </p>
 
@@ -46,7 +46,7 @@ Los hiperparámetros se pueden ver en el archivo YAML, además de todas las espe
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/main/todos.png" alt="Figura 3 - fig3">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/main/todoss.png" alt="Figura 3 - fig3">
 </div>
 <p><strong>Figura 3</strong>: Dispersión para observados y simulados en periodo de testeo para todas las cuencas de entrenamiento. </p>
 
