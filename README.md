@@ -10,7 +10,7 @@
 </p>
 
 <p align="justify">
-1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete reticulate. Se generó un entrenamiento para las cuencas de la Región del Biobío para un modelo EA-LSTM y los siguientes atributos dinamicos y estaticos:
+1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete Reticulate. Se generó un entrenamiento para las cuencas de la Región del Biobío para un modelo EA-LSTM y los siguientes atributos dinámicos y estáticos:
 
 **Dinámicos:**
 - precip_mm
@@ -25,6 +25,9 @@
 - gauge_lon
 - aridity_cr2met_1979_2010
 </p>
+
+Los hiperparámetros se pueden ver en el archivo YAML, además de todas las especificaciones del modelo implementado.
+
 
 <div align="center">
   <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/FIG.png" alt="Figura 1 - fig1">
