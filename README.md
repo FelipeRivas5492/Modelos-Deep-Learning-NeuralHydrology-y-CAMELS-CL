@@ -40,13 +40,13 @@ Los hiperparámetros se pueden ver en el archivo YAML, además de todas las espe
 2. En la <strong>Figura 2</strong> se puede ver la predicción para una cuenca en periodo de testeo. Mientras que en la <strong>Figura 3</strong> se graficaron todas las cuencas para el periodo de testeo.
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/diario.png" alt="Figura 1 - fig1">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/diario.png" alt="Figura 2 - fig2">
 </div>
 <p><strong>Figura 2</strong>: Izq: Serie de tiempo y métricas para la cuenca en periodo de testeo. Der: dispersión para observados y simulados en periodo de testeo. </p>
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/todos.png" alt="Figura 1 - fig1">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/todos.png" alt="Figura 3 - fig3">
 </div>
 <p><strong>Figura 3</strong>: Dispersión para observados y simulados en periodo de testeo para todas las cuencas de entrenamiento. </p>
 
