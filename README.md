@@ -10,7 +10,7 @@
 </p>
 
 <p align="justify">
-1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete Reticulate y se generaron funciones para pre-procesar la base de datos de CAMELS-CL como una base de datos generica y con ello evitar errores de incompatibilidad entre el formato de la base de datos y algunas funciones del paquete. Se generó un entrenamiento para las cuencas de la Región del Biobío para un modelo EA-LSTM y los siguientes atributos dinámicos y estáticos:
+1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete Reticulate y se generaron funciones para pre-procesar la base de datos de CAMELS-CL como una base de datos genérica y con ello evitar errores de incompatibilidad entre el formato de la base de datos y algunas funciones del paquete. Se generó un entrenamiento para un modelo EA-LSTM con las cuencas de la Región del Biobío y los siguientes atributos dinámicos y estáticos:
 
 
 **Dinámicos:**
@@ -27,10 +27,31 @@
 - aridity_cr2met_1979_2010
 </p>
 
-Los hiperparámetros se pueden ver en el archivo YAML, además de todas las especificaciones del modelo implementado. 
+Los hiperparámetros se pueden ver en el archivo YAML, además de todas las especificaciones del modelo implementado. En la <strong>Figura 1</strong> se muestra la pérdida total promedio para la métrica MSE.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/perdida.png" alt="Figura 1 - fig1">
+</div>
+<p><strong>Figura 1</strong>: Pérdida para la métrica MSE para las primeras 10 épocas de entrenamiento. </p>
+
+
+<p align="justify">
+
+2. En la <strong>Figura 2</strong> se puede ver la predicción para una cuenca en periodo de testeo. Mientras que en la <strong>Figura 3</strong> se graficaron todas las cuencas para el periodo de testeo.
+
+<div align="center">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/diario.png" alt="Figura 1 - fig1">
+</div>
+<p><strong>Figura 2</strong>: Izq: Serie de tiempo y métricas para la cuenca en periodo de testeo. Der: dispersión para observados y simulados en periodo de testeo. </p>
 
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/FIG.png" alt="Figura 1 - fig1">
+  <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/edit/main/todos.png" alt="Figura 1 - fig1">
 </div>
-<p><strong>Figura 1</strong>: fig1.</p>
+<p><strong>Figura 3</strong>: Dispersión para observados y simulados en periodo de testeo para todas las cuencas de entrenamiento. </p>
+
+
+
+
+
+
