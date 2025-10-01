@@ -1,0 +1,189 @@
+
+# --- Experiment configurations --------------------------------------------------------------------
+
+# experiment name, used as folder name
+experiment_name: test_LSTM
+
+
+run_dir: .../LSTM_chile_cuencas/LSTM/RUN_EALSTM
+
+# files to specify training, validation and test basins (relative to code root or absolute path)
+
+train_basin_file: .../LSTM_chile_cuencas/LSTM/train.txt
+validation_basin_file: .../LSTM_chile_cuencas/LSTM/eval.txt
+test_basin_file: .../LSTM_chile_cuencas/LSTM/test.txt
+
+# training, validation and test time periods (format = 'dd/mm/yyyy')
+
+train_start_date: "01/01/1986"
+train_end_date: "01/01/2005"
+validation_start_date: "01/01/2005"
+validation_end_date: "01/01/2010"
+test_start_date: "01/01/2010"
+test_end_date: "01/01/2015"
+
+# which GPU (id) to use [in format of cuda:0, cuda:1 etc, or cpu or None]
+device: cpu
+
+# --- Validation configuration ---------------------------------------------------------------------
+
+# specify after how many epochs to perform validation
+validate_every: 10
+
+# specify how many random basins to use for validation
+validate_n_random_basins: 10
+
+# specify which metrics to calculate during validation (see neuralhydrology.evaluation.metrics)
+# this can either be a list or a dictionary. If a dictionary is used, the inner keys must match the name of the
+# target_variable specified below. Using dicts allows for different metrics per target variable.
+metrics:
+
+  - NSE
+  - KGE 
+
+# --- Model configuration --------------------------------------------------------------------------
+
+# base model type [lstm, ealstm, cudalstm, embcudalstm, mtslstm]
+# (has to match the if statement in modelzoo/__init__.py)
+model: ealstm
+
+# prediction head [regression]. Define the head specific parameters below
+head: regression
+
+# ----> Regression settings <----
+output_activation: linear
+
+# ----> General settings <----
+
+# Number of cell states of the LSTM
+hidden_size: 256
+
+  
+# Initial bias value of the forget gate
+initial_forget_bias: 3
+
+# Dropout applied to the output of the LSTM
+output_dropout: 0.4
+
+# --- Training configuration -----------------------------------------------------------------------
+
+# specify optimizer [Adam]
+optimizer: Adam
+
+# specify loss [MSE, NSE, RMSE]
+loss: MSE
+
+# specify learning rates to use starting at specific epochs (0 is the initial learning rate)
+learning_rate:
+  0: 1e-2
+  30: 5e-3
+  60: 3e-3
+  80: 1e-3
+
+# Mini-batch size
+batch_size: 256
+
+# Number of training epochs
+epochs: 50
+
+# If a value, clips the gradients during training to that norm.
+clip_gradient_norm: 1
+
+# Defines which time steps are used to calculate the loss. Can't be larger than seq_length.
+# If use_frequencies is used, this needs to be a dict mapping each frequency to a predict_last_n-value, else an int.
+predict_last_n: 1
+
+# Length of the input sequence
+# If use_frequencies is used, this needs to be a dict mapping each frequency to a seq_length, else an int.
+seq_length: 180
+
+# Number of parallel workers used in the data pipeline
+num_workers: 8
+
+# Log the training loss every n steps
+log_interval: 5
+
+# If true, writes logging results into tensorboard file
+log_tensorboard: True
+
+# If a value and greater than 0, logs n random basins as figures during validation
+log_n_figures: 1
+
+# Save model weights every n epochs
+save_weights_every: 5
+
+# Store the results of the validation to disk
+
+save_validation_results: True
+
+
+# Store the training losses to disk
+
+save_train_data: True
+
+
+# --- Data configurations --------------------------------------------------------------------------
+
+# which data set to use [camels_us, camels_gb, global, hourly_camels_us]
+
+dataset: generic
+
+# Path to data set root
+data_dir: ...\LSTM_chile_cuencas\CAMELS_CL_v202201
+
+#### PREDICTORES DINAMICOS date,"pet_hargreaves_mm","precip_chirps_mm","precip_cr2met_mm","precip_mswep_mm","precip_tmpa_mm",
+#### "q_mm","tmax_cr2met_C","tmean_cr2met_C","tmin_cr2met_C","P","PET","SWE","Tmean","Geopotential_height_surface.x",
+#### "Volumetric_Soil_Moisture_Content_depth_below_surface_layer_70_cm.x","NDVI","NDSI","Qmm","etiqueta"
+#### date,"Precip_Observada","precipitacion","pixel_id" 
+#### ID,"altitud_media","pendiente_media","aspecto_medio"
+
+
+# gauge_id,"gauge_name","gauge_lat","gauge_lon","record_period_start","record_period_end","n_obs","outlet_camels_lat","outlet_camels_lon","outlet_camels_elev","area_km2","mean_elev",
+# "med_elev","max_elev","min_elev","mean_slope_perc","geol_class_1st","geol_class_1st_frac","geol_class_2nd","geol_class_2nd_frac","lc_crop","lc_nf","lc_fp","lc_grass","lc_shrub","lc_wet",
+# "lc_imp","lc_barren","lc_snow","lc_glacier","lc_fp_index","lc_forest","lc_dom_name","lc_frac_dom","lc_nodata","pet_mean_1990_2010","pet_mean_1979_2010","p_mean_cr2met_1990_2010",
+# "p_mean_cr2met_1979_2010","p_mean_chirps_1990_2010","p_mean_chirps_1979_2010","p_mean_mswep_1990_2010","p_mean_mswep_1979_2010","p_mean_tmpa_1990_2010","p_mean_tmpa_1979_2010","aridity_cr2met_1990_2010",
+# "aridity_cr2met_1979_2010","aridity_chirps_1990_2010","aridity_chirps_1979_2010","aridity_mswep_1990_2010","aridity_mswep_1979_2010","aridity_tmpa_1990_2010","aridity_tmpa_1979_2010",
+# "p_seasonality_cr2met_1979_2010","p_seasonality_chirps_1979_2010","p_seasonality_mswep_1979_2010","p_seasonality_tmpa_1979_2010","frac_snow_cr2met_1979_2010","frac_snow_chirps_1979_2010",
+# "frac_snow_mswep_1979_2010","frac_snow_tmpa_1979_2010","high_prec_freq_cr2met_1979_2010","high_prec_freq_chirps_1979_2010","high_prec_freq_mswep_1979_2010","high_prec_freq_tmpa_1979_2010",
+# "high_prec_dur_cr2met_1979_2010","high_prec_dur_chirps_1979_2010","high_prec_dur_mswep_1979_2010","high_prec_dur_tmpa_1979_2010","high_prec_timing_cr2met_1979_2010","high_prec_timing_chirps_1979_2010",
+# "high_prec_timing_mswep_1979_2010","high_prec_timing_tmpa_1979_2010","low_prec_freq_cr2met_1979_2010","low_prec_freq_chirps_1979_2010","low_prec_freq_mswep_1979_2010","low_prec_freq_tmpa_1979_2010",
+# "low_prec_dur_cr2met_1979_2010","low_prec_dur_chirps_1979_2010","low_prec_dur_mswep_1979_2010","low_prec_dur_tmpa_1979_2010","low_prec_timing_cr2met_1979_2010","low_prec_timing_chirps_1979_2010",
+# "low_prec_timing_mswep_1979_2010","low_prec_timing_tmpa_1979_2010","p_mean_spread_1990_2010","q_mean_1990_2010","q_mean_1979_2010","runoff_ratio_cr2met_1979_2010","runoff_ratio_chirps_1979_2010",
+# "runoff_ratio_mswep_1979_2010","runoff_ratio_tmpa_1979_2010","stream_elas_cr2met_1979_2010","stream_elas_chirps_1979_2010","stream_elas_mswep_1979_2010","stream_elas_tmpa_1979_2010","slope_fdc_1979_2010",
+# "baseflow_index_1979_2010","hfd_mean","Q5_1979_2010","Q95_1979_2010","high_q_freq_1979_2010","high_q_dur_1979_2010","low_q_freq_1979_2010","low_q_dur_1979_2010","zero_q_freq_1979_2010","sur_rights_flow_m3s",
+# "gw_rights_flow_m3s","IAI_Q","IAI_P","dam_index"
+#
+
+
+dynamic_inputs:
+
+  - precip_mm
+  - pet_mm
+  - tmin
+  - tmax
+
+
+static_attributes:
+
+  - mean_elev
+  - mean_slope_perc
+  - gauge_lat
+  - gauge_lon
+  - aridity_cr2met_1979_2010
+
+
+# which columns to use as target
+
+target_variables:
+
+  - q_mm
+
+
+# clip negative predictions to zero for all variables listed below. Should be a list, even for single variables.
+
+clip_targets_to_zero:
+
+ - q_mm
+
+
+
