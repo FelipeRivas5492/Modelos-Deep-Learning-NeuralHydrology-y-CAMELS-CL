@@ -54,6 +54,7 @@ Los hiperparámetros se pueden ver en el archivo YAML, además de todas las espe
 
 
 
+<p align="justify">
 https://www.youtube.com/watch?v=_ZIzO_OF2vc
 
 
