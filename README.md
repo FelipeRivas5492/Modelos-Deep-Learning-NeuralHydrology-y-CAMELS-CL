@@ -13,19 +13,24 @@
 1. El código es una implementación para correr desde RStudio el paquete NeuralHydrology, escrito en lenguaje Python. Para ello, se usó el paquete Reticulate y se generaron funciones para pre-procesar la base de datos de CAMELS-CL como una base de datos genérica y con ello evitar errores de incompatibilidad entre el formato de la base de datos y algunas funciones del paquete. Se generó un entrenamiento para un modelo EA-LSTM con las cuencas de la Región del Biobío y los siguientes atributos dinámicos y estáticos:
 
 
-**Dinámicos:**
-- precip_mm
-- pet_mm
-- tmin
-- tmax
+<div align="center">
+  <p><strong>Dinámicos:</strong></p>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li>precip_mm</li>
+    <li>pet_mm</li>
+    <li>tmin</li>
+    <li>tmax</li>
+  </ul>
 
-**Estáticos:**
-- mean_elev
-- mean_slope_perc
-- gauge_lat
-- gauge_lon
-- aridity_cr2met_1979_2010
-</p>
+  <p><strong>Estáticos:</strong></p>
+  <ul style="list-style: none; padding: 0; margin: 0;">
+    <li>mean_elev</li>
+    <li>mean_slope_perc</li>
+    <li>gauge_lat</li>
+    <li>gauge_lon</li>
+    <li>aridity_cr2met_1979_2010</li>
+  </ul>
+</div>
 
 Los hiperparámetros se pueden ver en el archivo YAML, además de todas las especificaciones del modelo implementado. En la <strong>Figura 1</strong> se muestra la pérdida total promedio para la métrica MSE.
 
