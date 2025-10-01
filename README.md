@@ -14,22 +14,20 @@
 
 
 <div align="center">
-  <p><strong>Dinámicos:</strong></p>
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li>precip_mm</li>
-    <li>pet_mm</li>
-    <li>tmin</li>
-    <li>tmax</li>
-  </ul>
+<p><strong>Dinámicos:</strong><br>
+- precip_mm<br>
+- pet_mm<br>
+- tmin<br>
+- tmax
+</p>
 
-  <p><strong>Estáticos:</strong></p>
-  <ul style="list-style: none; padding: 0; margin: 0;">
-    <li>mean_elev</li>
-    <li>mean_slope_perc</li>
-    <li>gauge_lat</li>
-    <li>gauge_lon</li>
-    <li>aridity_cr2met_1979_2010</li>
-  </ul>
+<p><strong>Estáticos:</strong><br>
+- mean_elev<br>
+- mean_slope_perc<br>
+- gauge_lat<br>
+- gauge_lon<br>
+- aridity_cr2met_1979_2010
+</p>
 </div>
 
 Los hiperparámetros se pueden ver en el archivo YAML, además de todas las especificaciones del modelo implementado. En la <strong>Figura 1</strong> se muestra la pérdida total promedio para la métrica MSE.
