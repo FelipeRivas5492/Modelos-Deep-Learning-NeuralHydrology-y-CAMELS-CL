@@ -15,10 +15,10 @@
 
 <div align="center">
 <p><strong>Dinámicos:</strong><br>
-- precip_mm<br>
-- pet_mm<br>
-- tmin<br>
-- tmax
+- precip_mm_cr2met<br>
+- pet_mm_cr2met<br>
+- tmin_cr2met<br>
+- tmax_cr2met
 </p>
 
 <p><strong>Estáticos:</strong><br>
