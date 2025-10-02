@@ -44,7 +44,7 @@ Los hiperparámetros se pueden ver en el archivo YAML, además de todas las espe
 <div align="center">
   <img src="https://raw.githubusercontent.com/FelipeRivas5492/Modelos-Deep-Learning-NeuralHydrology-y-CAMELS-CL/main/diario.png" alt="Figura 2 - fig2">
 <div align="center">
-<p><strong>Figura 2</strong>: Izq: Serie de tiempo y métricas para la cuenca en periodo de testeo. Der: dispersión para observados y simulados en periodo de testeo. </p>
+<p><strong>Figura 2</strong>: Izq: Serie de tiempo y métricas para la cuenca en periodo de testeo. Der: dispersión para observados y simulados en periodo de testeo. Cuenca Rio Lleu-Lleu En Desague Lago Lleu-Lleu. </p>
 
 
 <div align="center">
