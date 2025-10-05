@@ -1,5 +1,5 @@
 
-<strong> MODELOS DEEP LEARNING: NEURALHYDROLOGY Y CAMELS-CL. DISPONIBLES EN:</strong>
+<strong> MODELOS DEEP LEARNING: NEURALHYDROLOGY Y CAMELS-CL. DISPONIBLES EN:</strong> 
 
 <p align="justify">
 <strong>Kratzert, F., Gauch, M., Nearing, G., & Klotz, D. (2022). NeuralHydrology — A Python library for deep learning research in hydrology. Journal of Open Source Software, 7(71), 4050. https://doi.org/10.21105/joss.04050 </strong>
