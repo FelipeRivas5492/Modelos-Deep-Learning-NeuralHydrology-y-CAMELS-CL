@@ -20,14 +20,14 @@ require(readr)
 # 
 # usar DESDE esta version para compatibilizar el lenguaje del paquete.
 
-use_python("C:/Users/felip/AppData/Local/Programs/Python/Python310/python.exe", required = TRUE)
+use_python("C:/Users/.../AppData/Local/Programs/Python/Python310/python.exe", required = TRUE)
 py_config()
 
 
 #### INSTALAR NH EN LA CARPETA DE CAMELS ####
 
 
-install_dir <- "C:/Otono_2024/LSTM_chile_cuencas"
+install_dir <- ".../LSTM_chile_cuencas"
 
 
 if (!dir.exists(install_dir)) {
