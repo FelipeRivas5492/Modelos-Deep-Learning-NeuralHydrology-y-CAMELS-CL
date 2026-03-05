@@ -448,7 +448,11 @@ test$test_results
 
 test$plot_loss
 
-
+# aqui se tomo el avg_total_loss desde lo que el modelo imprime en consola cuando se entrena
+# esta informacion se guarda en output.log en la carpeta del entrenamiento
+# para el ultimo modelo que se entreno esta informacion se perdio por mala manipulacion, sin embargo, si se entrena el modelo nuevamente
+# se escribe automanticamente el output.log y no es necesario darla como un vector sino ocupar la funcion anterior y test$plot_loss para graficar la perdida
+# notar tambien las diferencias entre la perdida promedio y la perdida total promedio. 
 
 # Vector de avg_total_loss para las primeras 10 épocas
 avg_total_loss <- c(
