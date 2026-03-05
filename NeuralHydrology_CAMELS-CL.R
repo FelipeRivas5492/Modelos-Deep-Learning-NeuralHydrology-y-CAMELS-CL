@@ -153,7 +153,7 @@ crear_csv_por_cuenca <- function(input_dir, output_dir) {
     write_csv(df_cuenca, output_file, na = "-9999")
   }
 
-  message("✅ Todos los archivos han sido generados en: ", output_dir)
+  message("Todos los archivos han sido generados en: ", output_dir)
 }
 
 
@@ -274,7 +274,7 @@ guardar_cuencas_csv <- function(data, output_dir) {
     )
   }
   
-  message("✅ Archivos generados en: ", output_dir)
+  message(" Archivos generados en: ", output_dir)
 }
 
 
